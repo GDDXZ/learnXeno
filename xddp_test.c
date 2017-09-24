@@ -47,6 +47,7 @@
  * NOTE: XDDP is a replacement for the legacy RT_PIPE interface
  * available from the native skin until Xenomai 3.
  */
+#define  _GNU_SOURCE
 #include <sys/mman.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -64,7 +65,6 @@
 RT_TASK myTask;
 //500ms
 #define PERIOD_NS 500000000
-
 pthread_t nrt;
 
 #define XDDP_PORT 0     /* [0..CONFIG-XENO_OPT_PIPE_NRDEV - 1] */
